@@ -63,6 +63,30 @@ verify 0 CTF{FLAG}
 
 **Skills Tested**: Creating and configuring virtual hosts in Apache, understanding document roots.
 
+### Challenge 4: Basic Authentication
+
+**Scenario**: Configure basic authentication for the challenge4 virtual host to access a protected page.
+
+**Hint**: You'll need to set up a user named 'admin' with the password 'SuperPassword' and configure the appropriate authentication directives in the virtual host.
+
+**Skills Tested**: Implementing HTTP Basic Authentication in Apache, managing credentials securely.
+
+### Challenge 5: URL Rewriting
+
+**Scenario**: Implement a URL rewrite rule that redirects requests from `/getflag` to the appropriate PHP file.
+
+**Hint**: You'll need to enable the rewrite module and add appropriate rewrite rules to the virtual host configuration. Focus on configuring rewrites at the virtual host level rather than using .htaccess.
+
+**Skills Tested**: Configuring mod_rewrite, understanding regular expressions in Apache's rewrite rules.
+
+### Challenge 6: Server Hardening
+
+**Scenario**: Improve the security configuration of the web server by implementing proper error pages and disabling information leakage.
+
+**Hint**: Configure a custom 404 error page from `/var/www/errors/404.html` and prevent Apache from revealing server information in headers and error pages.
+
+**Skills Tested**: Security hardening best practices, error handling configuration, and server information protection.
+
 ## ✅ Verification
 
 Run the verification script to check your progress:
