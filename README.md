@@ -119,7 +119,7 @@ tofu destroy
 ## 🏆 Learning Paths
 
 ### Path 1: Web Infrastructure Fundamentals
-- **Lab 1.1**: Web Server Fundamentals with Apache
+- **Lab 1.1**: Web Server Fundamentals with Apache & Nginx
 
 ## 🏁 Advanced Challenges
 

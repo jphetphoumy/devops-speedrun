@@ -1,0 +1,10 @@
+proxmox_ve_endpoint = "192.168.1.100"
+proxmox_ve_password = "your-password-here"
+proxmox_node_name = "pve"
+proxmox_datastore_id_volume = "local-lvm"
+lxc_ipv4_address = "192.168.1.200/24"
+lxc_ipv4_gateway = "192.168.1.1"
+ssh_public_keys = [
+  "ssh-rsa AAAAB3NzaC1yc2EAAA...your-public-key..."
+]
+ssh_private_key_path = "~/.ssh/id_rsa"
