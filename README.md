@@ -4,7 +4,8 @@ A comprehensive, practical approach to learning DevOps through interactive labs 
 
 ## 🚀 Overview
 
-This repository contains a series of hands-on CTF-style labs designed to teach DevOps practices using real-world technologies. Each lab provides infrastructure-as-code templates that can be directly deployed to a Proxmox hypervisor, primarily using lightweight LXC containers to minimize resource requirements.
+> [!IMPORTANT]  
+> This repository contains a series of hands-on CTF-style labs designed to teach DevOps practices using real-world technologies. Each lab provides infrastructure-as-code templates that can be directly deployed to a Proxmox hypervisor, primarily using lightweight LXC containers to minimize resource requirements.
 
 ## 🔧 Prerequisites
 
@@ -118,41 +119,7 @@ tofu destroy
 ## 🏆 Learning Paths
 
 ### Path 1: Web Infrastructure Fundamentals
-- **Lab 1.1**: Web Server Fundamentals with Apache & Nginx
-- **Lab 1.2**: HAProxy Load Balancing & High Availability
-- **Lab 1.3**: Dynamic Content with PHP-FPM
-- **Lab 1.4**: WordPress Deployment and Optimization
-- **Lab 1.5**: Advanced Caching with Varnish and Redis
-- **Lab 1.6**: Security Hardening for Web Infrastructure
-- **Lab 1.7**: Complete Web Stack Deployment
-
-### Path 2: Containerization and Orchestration
-- **Lab 2.1**: Docker Fundamentals
-- **Lab 2.2**: K3s Cluster Deployment
-- **Lab 2.3**: Application Deployment on Kubernetes
-- **Lab 2.4**: Stateful Workloads
-- **Lab 2.5**: Scaling and High Availability
-
-### Path 3: CI/CD and Automation
-- **Lab 3.1**: Pipeline Construction
-- **Lab 3.2**: Infrastructure as Code Best Practices
-- **Lab 3.3**: Automated Testing
-- **Lab 3.4**: Continuous Deployment
-- **Lab 3.5**: Pipeline Security
-
-### Path 4: Monitoring, Logging, and Security
-- **Lab 4.1**: Prometheus and Grafana Setup
-- **Lab 4.2**: ELK Stack Implementation
-- **Lab 4.3**: Security Scanning Integration
-- **Lab 4.4**: Compliance Automation
-- **Lab 4.5**: Incident Response
-
-### Path 5: Bash Scripting for DevOps
-- **Lab 5.1**: Automation Scripts
-- **Lab 5.2**: System Monitoring
-- **Lab 5.3**: Deployment Workflows
-- **Lab 5.4**: Backup and Recovery
-- **Lab 5.5**: Custom DevOps Tools
+- **Lab 1.1**: Web Server Fundamentals with Apache
 
 ## 🏁 Advanced Challenges
 
@@ -178,24 +145,6 @@ Completing all paths unlocks advanced CTF-style challenges:
 3. **Template download fails**
    - Ensure your Proxmox server has internet access
    - Verify storage has sufficient space
-
-### Getting Help
-
-If you encounter issues that aren't addressed in the troubleshooting section:
-
-1. Check the lab's specific README.md for lab-specific troubleshooting
-2. Review the documentation in the `docs/` directory
-3. Look for similar issues in the GitHub repository issues
-
-## 📚 Additional Resources
-
-- Detailed guides in the `docs/` directory
-- Architecture diagrams in `diagrams/`
-- Common troubleshooting in `docs/troubleshooting.md`
-
-## 🤝 Contributing
-
-Contributions are welcome! See `CONTRIBUTING.md` for details on how to add new labs or improve existing ones.
 
 ## 📜 License
 
