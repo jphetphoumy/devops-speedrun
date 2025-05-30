@@ -1,15 +1,1 @@
-<Directory {{ item.documentroot }}>
-    AllowOverride All
-    Require all granted
-    Options -Indexes +FollowSymLinks
-</Directory>
-
-# WordPress specific settings
-<FilesMatch \.php$>
-    SetHandler application/x-httpd-php
-</FilesMatch>
-
-# Allow .htaccess files
-<Directory {{ item.documentroot }}>
-    AllowOverride All
-</Directory>
+# Write you Custom Configuration here

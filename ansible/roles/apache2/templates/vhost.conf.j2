@@ -1,23 +1,26 @@
 <VirtualHost *:80>
     ServerName {{ item.servername }}
-    {% if item.serveralias is defined %}
+{% if item.serveralias is defined %}
     ServerAlias {{ item.serveralias }}
-    {% endif %}
+{% endif %}
     
     DocumentRoot {{ item.documentroot }}
 
-    {% if item.errorlog is defined %}
+{% if item.errorlog is defined %}
     ErrorLog {{ item.errorlog }}
-    {% endif %}
+{% endif %}
     
-    {% if item.customlog is defined %}
+{% if item.customlog is defined %}
     CustomLog {{ item.customlog }}
-    {% endif %}    
-    {% if item.extra_parameters is defined %}
+{% endif %}
+{% if item.extra_parameters is defined %}
     {{ item.extra_parameters }}
-    {% endif %}
-    {% if item.extra_parameters_template is defined %}
-    {% include item.extra_parameters_template %}
-    {% endif %}
+{% endif %}
+{% if item.extra_parameters_template is defined %}
+{% macro template_vhost_extra() %}
+{% include item.extra_parameters_template %}
+{% endmacro %}
+    {{ template_vhost_extra()|indent(4) }}
+{% endif %}
 
 </VirtualHost>

@@ -39,7 +39,8 @@ resource "null_resource" "apache_ctf_setup" {
   connection {
     type        = "ssh"
     host        = module.apache_ctf_lxc.lxc_ipv4_address
-    private_key = file(var.ssh_private_key_path)
+    #private_key = file(var.ssh_private_key_path)
+    agent       = true
     user        = "root"
   }
 

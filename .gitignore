@@ -1,7 +1,7 @@
 # Ignore Terraform variables files
 *.auto.tfvars
 setup/*.auto.tfvars
-ansible/inventory.ini
+*inventory.ini
 # Ignore Terraform state files
 *.tfstate
 *.tfstate.backup

@@ -77,3 +77,10 @@ echo "127.0.0.1       challenge1.local" >> /etc/hosts
 echo "127.0.0.1       challenge3.local" >> /etc/hosts
 echo "127.0.0.1       challenge4.local" >> /etc/hosts
 echo "127.0.0.1       challenge5.local" >> /etc/hosts
+
+# Setup cronjob for the wordpress check using wordpress-install-checker.sh
+
+echo "0 * * * * root /usr/bin/wordpress-install-checker.sh" > /etc/cron.d/wordpress-check
+
+# Make sure the script is executable
+chmod +x /usr/bin/wordpress-install-checker.sh

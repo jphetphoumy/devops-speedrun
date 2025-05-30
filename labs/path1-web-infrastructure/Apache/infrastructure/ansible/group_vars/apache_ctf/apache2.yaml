@@ -1,0 +1,3 @@
+---
+# Apache vhost configuration for the Apache CTF host
+apache_vhosts: []
