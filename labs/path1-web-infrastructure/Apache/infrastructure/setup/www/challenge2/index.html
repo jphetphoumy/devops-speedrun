@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Virtual Host Challenge</title>
+  <style>
+    body {
+      background-color: #0d1117;
+      color: #c9d1d9;
+      font-family: monospace;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .container {
+      border: 2px dashed #3fb950;
+      padding: 2rem;
+      max-width: 600px;
+      text-align: center;
+      background-color: #161b22;
+      box-shadow: 0 0 20px rgba(63, 185, 80, 0.2);
+    }
+
+    h1 {
+      color: #3fb950;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      margin: 0.5rem 0;
+    }
+
+    .flag {
+      margin-top: 1.5rem;
+      font-weight: bold;
+      font-size: 1.1rem;
+      color: #58a6ff;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Nice Work, Operator!</h1>
+    <p>You successfully accessed the correct virtual host.</p>
+    <p>This proves you understand how Apache uses ServerName and DocumentRoot.</p>
+    <p>Mastering virtual hosts is key to managing multiple sites on one server.</p>
+    <div class="flag">
+      Here's your flag: CTF{VHOST_ARE_GREAT}
+    </div>
+  </div>
+</body>
+</html>

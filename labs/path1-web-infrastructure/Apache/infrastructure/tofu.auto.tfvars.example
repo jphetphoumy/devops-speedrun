@@ -1,0 +1,8 @@
+proxmox_ve_endpoint = "your-proxmox-server-ip"
+proxmox_ve_password = "your-root-password-here"
+proxmox_node_name = "pve"  # Change to your node name if different
+proxmox_datastore_id = "local"
+proxmox_datastore_id_volume = "local-lvm"
+ssh_public_keys = [
+    "public key here"
+]
