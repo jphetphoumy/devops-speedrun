@@ -1,0 +1,35 @@
+---
+# Default Apache2 settings
+apache_packages:
+  - apache2
+  - apache2-utils
+
+# Default modules to enable
+apache_modules:
+  - rewrite
+  - ssl
+
+# Default vhosts configuration
+apache_vhosts: []
+# Example of vhost definition:
+# apache_vhosts:
+#   - name: example.com
+#     servername: example.com
+#     serveralias: www.example.com
+#     documentroot: /var/www/html/example
+#     errorlog: /var/log/apache2/example.com_error.log
+#     customlog: /var/log/apache2/example.com_access.log combined
+#     # You can provide extra_parameters in three ways:
+#     
+#     # 1. As a multi-line string:
+#     extra_parameters: |
+#       <Directory /var/www/html/example>
+#         AllowOverride All
+#         Require all granted
+#       </Directory>
+#     
+#     # 2. As a Jinja2 include:
+#     # extra_parameters: "{% include 'path/to/my_template.j2' %}"
+#     
+#     # 3. Alternatively, use a completely custom template for the whole vhost:
+#     # template: custom_vhost.conf.j2

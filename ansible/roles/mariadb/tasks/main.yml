@@ -1,0 +1,12 @@
+---
+# Tasks for installing and configuring MariaDB
+- name: Install MariaDB
+  apt:
+    name: mariadb-server
+    state: present
+
+- name: Start and enable MariaDB service
+  service:
+    name: mariadb
+    state: started
+    enabled: true

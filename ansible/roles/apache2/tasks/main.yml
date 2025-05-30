@@ -1,0 +1,16 @@
+---
+- name: Install Apache2 and dependencies
+  apt:
+    name: "{{ apache_packages }}"
+    state: present
+    update_cache: yes
+
+- name: Enable required Apache modules
+  apache2_module:
+    name: "{{ item }}"
+    state: present
+  loop: "{{ apache_modules }}"
+  notify: restart apache2
+
+- name: Include vhost configuration tasks
+  include_tasks: vhosts.yml

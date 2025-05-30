@@ -1,0 +1,14 @@
+---
+- name: Install Wordpress
+  hosts: apache_ctf
+  roles:
+    - mariadb
+    - apache2
+  vars:
+    apache_vhosts:
+      - name: wordpress
+        servername: wordpress.local
+        documentroot: /var/www/wordpress
+        errorlog: /var/log/apache2/wordpress_error.log
+        customlog: /var/log/apache2/wordpress_access.log combined
+        extra_parameters_template: "./templates/wordpress_extra.j2"

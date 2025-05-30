@@ -1,0 +1,27 @@
+---
+- name: Ensure Apache is installed before configuring
+  ansible.builtin.assert:
+    that:
+      - apache_packages is defined
+    msg: "Apache packages must be installed before configuring vhosts"
+
+- name: Configure Apache vhosts with default template
+  template:
+    src: "vhost.conf.j2"
+    dest: "/etc/apache2/sites-available/{{ item.name }}.conf"
+    owner: root
+    group: root
+    mode: '0644'
+  loop: "{{ apache_vhosts }}"
+  loop_control:
+    label: "{{ item.name }}"
+  when: apache_vhosts is defined and apache_vhosts | length > 0
+  notify: restart apache2
+
+- name: Enable configured vhosts
+  command: a2ensite {{ item.name }}.conf
+  args:
+    creates: "/etc/apache2/sites-enabled/{{ item.name }}.conf"
+  loop: "{{ apache_vhosts }}"
+  when: apache_vhosts is defined and apache_vhosts | length > 0
+  notify: restart apache2

@@ -70,3 +70,14 @@ resource "null_resource" "apache_ctf_setup" {
     script = "./setup/finalizer.sh"
   }
 }
+
+resource "local_file" "inventory" {
+  depends_on = [module.apache_ctf_lxc]
+
+  filename = "./ansible/inventory.ini"
+
+  content = <<EOT
+[apache_ctf]
+${module.apache_ctf_lxc.lxc_ipv4_address} ansible_user=root ansible_ssh_private_key_file=${var.ssh_private_key_path}
+EOT
+}
