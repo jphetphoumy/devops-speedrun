@@ -28,8 +28,8 @@ module "apache_ctf_lxc" {
   proxmox_datastore_id = var.proxmox_datastore_id_volume
   description          = "LXC container for Apache CTF"
   lxc_hostname         = "apache-ctf"
-  lxc_ipv4_address     = "192.168.1.100/24"
-  lxc_ipv4_gateway     = "192.168.1.1"
+  lxc_ipv4_address     = var.lxc_ipv4_address
+  lxc_ipv4_gateway     = var.lxc_ipv4_gateway
   ssh_public_keys      = var.ssh_public_keys
 }
 
