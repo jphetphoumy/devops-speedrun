@@ -38,3 +38,14 @@ variable "ssh_private_key_path" {
   type        = string
   default     = "~/.ssh/id_ed25519"
 }
+
+variable "lxc_ipv4_address" {
+  description = "IPv4 address for the LXC container"
+  type        = string
+}
+
+variable "lxc_ipv4_gateway" {
+  description = "IPv4 gateway for the LXC container"
+  type        = string
+  default     = "192.168.1.1"
+}
