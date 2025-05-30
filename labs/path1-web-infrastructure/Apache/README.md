@@ -8,20 +8,45 @@ This lab introduces you to Apache, one of the most widely used web servers in th
 
 - Apache configuration structure and syntax
 - Virtual hosting with Apache
-- Multi-Processing Modules (MPMs)
 - Security best practices
 - URL rewriting and redirects
-- Performance tuning and optimization
-- Logging and monitoring
 
 ## 💻 Lab Environment
 
-This lab deploys an Ubuntu-based LXC container with Apache installed but intentionally misconfigured. As a student, you'll have:
+This lab deploys a Debian-based LXC container with Apache installed but intentionally misconfigured. As a student, you'll have:
 
 - Access to modify Apache configuration files
 - Permission to restart/reload the Apache service
 - Limited file system access (simulating real-world permission restrictions)
 - Access to a verification script to check your progress
+
+## 🚀 Running the Lab
+
+To set up and run the lab, follow these steps:
+
+1. **Prepare the Variables**:
+   - Navigate to the `infrastructure` directory.
+   - Copy the example `tfvars` file:
+     ```bash
+     cp tofu.auto.tfvars.example tofu.auto.tfvars
+     ```
+   - Edit the `tofu.auto.tfvars` file to fill in the required variables.
+
+2. **Initialize Terraform**:
+   - Run the following command to initialize the Terraform environment:
+     ```bash
+     tofu init
+     ```
+
+3. **Plan and Apply**:
+   - Generate an execution plan:
+     ```bash
+     tofu plan
+     ```
+   - Apply the changes to set up the lab:
+     ```bash
+     tofu apply
+     ```
 
 ## 🚩 Challenge Format
 
